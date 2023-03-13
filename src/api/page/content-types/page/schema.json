@@ -44,7 +44,9 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": false
     },
     "parent": {
       "type": "relation",
@@ -54,11 +56,12 @@
     "slug": {
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       },
-      "type": "uid",
-      "targetField": "title"
+      "type": "string",
+      "unique": false,
+      "regex": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
     }
   }
 }
